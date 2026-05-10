@@ -62,8 +62,10 @@ div input {
 }
 
 .page {
-    min-width: 34px;
-    height: 34px;
+    min-width: 25px;
+    max-width: 30px;
+    width: 30px;
+    height: 30px;
     border: 1px solid #d9d9d9;
     background-color: white;
     color: #555;
