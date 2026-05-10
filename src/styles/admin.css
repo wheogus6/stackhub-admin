@@ -53,26 +53,39 @@ div input {
     text-decoration: none;
 }
 
-.page{
-    cursor: pointer;
-}
-
 .pagination {
-    list-style-type: none;
-    text-align: center;
-}
-.pagination li {
-    display: inline;
-    margin-right: 5px; /* 각 아이템 사이의 간격 조절 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 30px;
 }
 
+.page {
+    min-width: 34px;
+    height: 34px;
+    border: 1px solid #d9d9d9;
+    background-color: white;
+    color: #555;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
 
-.page_tab {
-    border-collapse: collapse;
-    border: none;
-    margin: 30px auto;
-    width: 780px;
-    text-align: center;
+.page:hover {
+    background-color: #f3f3f3;
+}
+
+.page.active {
+    background-color: #8D8D8D;
+    color: white;
+    border-color: #8D8D8D;
+}
+
+.page:disabled {
+    opacity: 0.4;
+    cursor: default;
 }
 
 #excel_bt {

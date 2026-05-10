@@ -14,6 +14,8 @@ import {
     AuthProvider,
     useAuthContext
 } from "../store/context/AuthContext";
+import AdminLayout from "../layout/AdminLayout";
+import MemberPage from "../pages/member/MemberPage";
 
 function RouterContent() {
 
@@ -32,7 +34,10 @@ function RouterContent() {
             <Route path="/login" element={<LoginPage />}/>
 
             <Route element={<PrivateRoute isLogin={isLogin} />}>
-                <Route path="/main" element={<div>MAIN PAGE</div>}/>
+                <Route element={<AdminLayout />}>
+                    <Route path="/member" element={<MemberPage />} />
+                    {/*<Route path="/partner" element={<PartnerPage />} />*/}
+                </Route>
             </Route>
 
         </Routes>

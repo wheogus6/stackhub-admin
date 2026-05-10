@@ -36,7 +36,7 @@ export default function LoginPage() {
             if(tokenCode == "00") {
                 if (tokenData.accessToken && tokenData.refreshToken) {
                     handleTokenResponse(res.data);
-                    navigate('/');
+                    navigate('/member');
                 } else {
                     defaultAlert('토큰 정보가 없습니다.');
                 }
